@@ -20,11 +20,11 @@
 
 .card {
   position: relative;
-  width: 350px;
-  height: 350px;
-  border: 2px solid black;
+  width: 340px;
+  height: 340px;
+  border: 2px solid #5a3c04;
   border-radius: 4px;
-  background-color: #fff;
+  background-color: #270202;
   -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
@@ -53,26 +53,30 @@
           transition-duration: 2s;
   -webkit-transition-timing-function: linear;
           transition-timing-function: linear;
-  -webkit-transform: perspective(200px);
-          transform: perspective(200px);
+  -webkit-transform: perspective(150px);
+          transform: perspective(150px);
 }
 
 .magic {
   color: red;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
   -webkit-transition-duration: 1000ms;
           transition-duration: 1000ms;
-  -webkit-transition-delay: 100ms;
-          transition-delay: 100ms;
+  -webkit-transition-delay: 1300ms;
+          transition-delay: 1300ms;
   -webkit-transition-timing-function: linear;
           transition-timing-function: linear;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .magic-on {
   opacity: 0;
   color: red;
-  -webkit-transition-delay: 1000ms;
-          transition-delay: 1000ms;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-delay: 1300ms;
+          transition-delay: 1300ms;
   -webkit-transition-duration: 1000ms;
           transition-duration: 1000ms;
   -webkit-transition-timing-function: linear;
@@ -95,7 +99,8 @@
 .button {
   width: 50px;
   height: 50px;
-  border-radius: 50px;
+  border-radius: 40px;
+  border: yellowgreen;
   background-color: orangered;
 }
 /*# sourceMappingURL=main.css.map */
