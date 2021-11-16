@@ -1,0 +1,30 @@
+.button {
+  font-family: Roboto, sans-serif;
+  @include font-style(700, 16px, 30px, 0.06em);
+  background-color: $accent-Color;
+  color: $white-color;
+
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+
+  @include animation($properties: 'background-color');
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}
+.button--footer {
+  @include flex-center(inline-flex);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  @media (min-width: 1200px) {
+    margin-left: 12px;
+  }
+}
+.button--modal {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  align-self: center;
+}
+// ---------------

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/components/body.scss"
+    ],
+    "names": [],
+    "file": "body.min.css"
+}

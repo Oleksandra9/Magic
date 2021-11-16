@@ -1,0 +1,15 @@
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+.page-header__container {
+  @media (min-width: 768px) {
+    @include flex-center($justify: space-between);
+  }
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  @media (max-width: 767px) {
+    justify-content: space-between;
+  }
+}

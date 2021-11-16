@@ -1,0 +1,18 @@
+.logo {
+  color: $accent-Color;
+  margin-right: 93px;
+
+  font-family: Raleway, sans-serif;
+  @include font-style(700, 26px, 31px);
+
+  @media (max-width: 767px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+.logo__part--blackcolor {
+  color: $black-color;
+}
+.logo__part--whitecolor {
+  color: $white-color;
+}

@@ -1,0 +1,131 @@
+.footer {
+  background-color: $secondary-Background-Color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 100%;
+}
+.footer__container {
+  @media (min-width: 767px) {
+    display: flex;
+  }
+  @media (min-width: 767px) and (max-width: 1199px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  @media (min-width: 1200px) {
+    align-items: baseline;
+  }
+}
+.footer__title {
+  margin-bottom: 20px;
+  @include font-style(700, 14px, 16px);
+  text-transform: uppercase;
+  color: $white-color;
+}
+.footer__address-box {
+  @media (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+  @media (max-width: 1199px) {
+    text-align: center;
+  }
+  @media (min-width: 1200px) {
+    margin-right: 70px;
+    flex-grow: 1;
+  }
+}
+.footer__logo {
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.address__item {
+  @media (max-width: 1199px) {
+    margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+  margin-bottom: 9px;
+  @include font-style($size: 14px, $height: 24px);
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+.address__link {
+  color: $white-color;
+  @include font-style($size: 14px, $height: 24px);
+
+  @include animation($properties: 'color');
+  &:hover,
+  &:focus {
+    color: $accent-Color;
+  }
+}
+.address__link--color {
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer__social-box {
+  @media (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+  @media (max-width: 1199px) {
+    text-align: center;
+  }
+  @media (min-width: 1199px) {
+    margin-right: 90px;
+  }
+}
+.footer__sign-up-box {
+  @media (max-width: 1199px) {
+    text-align: center;
+  }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    margin-top: 60px;
+  }
+}
+.social-icons__link--footer-style {
+  width: 44px;
+  height: 44px;
+  @include flex-center();
+  fill: $white-color;
+  background: rgba(255, 255, 255, 0.1);
+  @include animation($properties: 'background-color');
+  &:hover,
+  &:focus {
+    background-color: $accent-Color;
+  }
+}
+
+.sign-up-form__input {
+  width: 358px;
+
+  padding: 15px 16px;
+  border-radius: 4px;
+  background: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+  @include animation($properties: 'border,outline');
+  &:focus {
+    border: 1px solid $accent-Color;
+    outline: none;
+  }
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    @include font-style($size: 16px, $height: 20px);
+  }
+  @media (max-width: 1199px) {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+
+.sign-up-form__icon {
+  width: 24px;
+  height: 24px;
+  fill: $white-color;
+  margin-left: 10px;
+}

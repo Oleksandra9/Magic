@@ -1,0 +1,25 @@
+.social-icons {
+  @include flex-center();
+}
+.social-icons__item {
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  @include last-four(1) {
+    margin-right: 0px;
+  }
+}
+.social-icons__link {
+  @include flex-center();
+  fill: $icon-Color;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  @include animation($properties: 'fill,background-color');
+
+  &:hover,
+  &:focus {
+    fill: $white-color;
+    background-color: $accent-Color;
+  }
+}

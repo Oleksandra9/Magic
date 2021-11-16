@@ -1,0 +1,20 @@
+.social-nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 64px;
+}
+.social-nav__item {
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  &:last-child {
+    margin-right: 0px;
+    padding-right: 0px;
+    border-right: none;
+  }
+}
+.social-nav__link {
+  display: block;
+  @include font-style(500, 18px, 22px, 0.02em);
+  color: $accent-Color;
+}

@@ -1,0 +1,43 @@
+.works-list {
+  display: flex;
+}
+
+.works-list__item {
+  margin-right: 30px;
+  @include last-three(1) {
+    margin-right: 0px;
+  }
+}
+// ---------alternative-------------
+
+// .works__item {
+//   &:not(:last-child) {
+//     margin-right: 30px;
+//   }
+// }
+
+// ---------------------------------
+.works-list__thumb {
+  position: relative;
+}
+.works-list__textbox {
+  position: absolute;
+
+  width: 370px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  margin: 0px;
+  left: 0px;
+  bottom: 0px;
+  text-align: center;
+
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.works-list__title {
+  @include font-style(700, 14px, 16px);
+
+  text-align: center;
+  text-transform: uppercase;
+  color: $white-color;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
