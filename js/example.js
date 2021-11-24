@@ -15,7 +15,7 @@
 let base = prompt("Введи любое произвольное число от 1 до 9");
 base = Number(base);
 
-let power = prompt("введи любое произвольное число для степени число от 1 до 9");
+let power = prompt("введи любое произвольное число для степени  от 1 до 5");
 power = Number(power);
 
 console.log(base ** power);
