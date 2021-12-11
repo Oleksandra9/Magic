@@ -449,3 +449,6 @@ const atTheOldToad = {
 // --------------
 
 // console.log(atTheOldToad.removePotion("Dragon breath"));
+
+
+// --------МОДУЛЬ - 4-----------------------------------------------------------------------------
