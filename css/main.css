@@ -149,4 +149,18 @@
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
+
+.btn {
+  background-color: black;
+  color: red;
+}
+
+.btn:hover {
+  color: black;
+  background-color: red;
+}
+
+.img {
+  width: 400px;
+}
 /*# sourceMappingURL=main.css.map */

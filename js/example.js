@@ -7,7 +7,7 @@
 // const a = 2;
 // const b = 5;
 
-// console.log(Math.pow(a,b)); 
+// console.log(Math.pow(a,b));
 // console.log(a ** b);
 
 // ---------------------------------------
@@ -27,8 +27,8 @@
 // function multiply(x, y, z) {
 //   console.log(x * y * z);
 // }
-// multiply(2, 3, 5); 
-// multiply(4, 8, 12); 
+// multiply(2, 3, 5);
+// multiply(4, 8, 12);
 // multiply(17, 6, 25);
 // ----------------------------------
 
@@ -63,7 +63,7 @@
 
 // const colors = ["red", "green"];
 // colors.splice(1, 0, "yellow");
-// console.log(colors); 
+// console.log(colors);
 
 // const months = ['Jan', 'March'];
 // months.splice(1, 1, 'Feb');
@@ -119,8 +119,8 @@
 
 // const fruits = ['apple', 'plum', 'pear', 'orange'];
 
-// for (let i = 0;i < fruits.length; i +=1) { 
-//   const fruit = fruits[i]; 
+// for (let i = 0;i < fruits.length; i +=1) {
+//   const fruit = fruits[i];
 //   console.log(fruit);
 // }
 
@@ -210,7 +210,7 @@
 //     for (const key of keys) {
 //         // console.log(key);
 //         propCount += 1;
-// }  
+// }
 //   return propCount;
 // }
 
@@ -250,7 +250,7 @@
 //         if (product.name === productName) {
            
 //             return product.price;
-//         } 
+//         }
         
 //     }
 //     return null;
@@ -278,7 +278,7 @@
 //             if (key === propName) {
 //                 array.push(product[key]);
 //             }
-//         }               
+//         }
 //     }
 //     return array;
 // }
@@ -304,7 +304,7 @@
 //     for (const product of products) {
 //         if (product.name === productName) {
 //             total = product.price * product.quantity;
-//         }            
+//         }
 //     }
    
 //     return total;
@@ -387,7 +387,7 @@
 //             if (ar === arg) {
 //                 matches.push(arg);
 //             }
-//         }       
+//         }
 //     }
 //   return matches;
 // }
@@ -402,44 +402,44 @@
 // console.log(array3);
 
 // task - 41
-const atTheOldToad = {
-  potions: [
-    { name: "Speed potion", price: 460 },
-    { name: "Dragon breath", price: 780 },
-    { name: "Stone skin", price: 520 },
-  ], 
-  getPotions() {
-    return this.potions;
-  },
-  addPotion(newPotion) {
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
     
-      for (const potion of this.potions) {
-        if (potion.name === newPotion.name)
+//       for (const potion of this.potions) {
+//         if (potion.name === newPotion.name)
           
-        return `Error! Potion ${newPotion.name} is already in your inventory!`;   
-    }
-    console.log(newPotion.name);
-    this.potions.push(newPotion);
-  },
-  removePotion(potionName) {
-    for (let i = 0; i < this.potions.length; i += 1) {
-      const item = this.potions[i];
-      if (potionName === item.name) {
-        return this.potions.splice(i,1)
-      }
-    }
-    return `Potion ${potionName} is not in inventory!`
-  },
-  updatePotionName(oldName, newName) {
-    for (let i = 0; i < this.potions.length; i += 1) {
-      const item = this.potions[i];
-      if (oldName === item.name) {
-        return item.name = newName;
-      }
-    }
-    return `Potion $(oldName) is not in inventory`;
-  },
-};
+//         return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//     }
+//     console.log(newPotion.name);
+//     this.potions.push(newPotion);
+//   },
+//   removePotion(potionName) {
+//     for (let i = 0; i < this.potions.length; i += 1) {
+//       const item = this.potions[i];
+//       if (potionName === item.name) {
+//         return this.potions.splice(i,1)
+//       }
+//     }
+//     return `Potion ${potionName} is not in inventory!`
+//   },
+//   updatePotionName(oldName, newName) {
+//     for (let i = 0; i < this.potions.length; i += 1) {
+//       const item = this.potions[i];
+//       if (oldName === item.name) {
+//         return item.name = newName;
+//       }
+//     }
+//     return `Potion $(oldName) is not in inventory`;
+//   },
+// };
 
 // console.log(atTheOldToad.getPotions());
 // console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
@@ -451,4 +451,359 @@ const atTheOldToad = {
 // console.log(atTheOldToad.removePotion("Dragon breath"));
 
 
-// --------МОДУЛЬ - 4-----------------------------------------------------------------------------
+// --------ЗАДАЧКА-----------------------------------------------------------------------------
+
+
+
+// Given a list lst and a number N, create a new list that contains each number of lst at most N times without reordering. For example if N = 2, and the input is [1,2,3,1,2,1,2,3], you take [1,2,3,1,2], drop the next [1,2] since this would lead to 1 and 2 being in the result 3 times, and then take 3, which leads to [1,2,3,1,2,3].
+
+
+// function deleteNth(arr,n){
+//   // ...
+// }
+
+// -----мій недороблений варіант
+
+// const numbers = [1, 3, 2, 5, 5, 5, 7, 8, 1, 4];
+
+// const totalAmountOfNumber = numbers.reduce((acc, number) => ({ ...acc, [number]: acc[number] ? acc[number] + 1 : 1, }), {},);
+
+// console.log(totalAmountOfNumber);
+
+// const values = Object.values(totalAmountOfNumber);
+
+// const keys = Object.keys(totalAmountOfNumber);
+
+// // console.log(values);
+
+// // console.log(keys);
+
+// const fnA = function (array,values, n) {
+// const newNumbers = [];
+//         for (const arr of array) {
+//                 // console.log(arr);
+//   }
+//   return newNumbers;
+// }
+
+// console.log(fnA(totalAmountOfNumber,values,2));
+
+
+// ----робочий варіант Олега
+// function deleteNth(arr, n) {
+       
+//         const result = [];
+
+//         const total = {};
+        
+//   for (const number of arr) {
+//     // console.log(number);
+//     console.log(total[number]);
+//             total[number] = total[number] ? total[number] + 1 : 1;
+
+//     if (total[number] <= n) result.push(number);
+    
+//         }
+
+//         return result;
+// }
+
+// console.log(deleteNth([1,1,2,2,2], 2));
+
+
+
+
+// ----робочий варіант Іваніцького
+// const a = (list, N) => {
+//   const newList = [];
+//   const repeat = {};
+//   for (const element of list) {
+//     if (repeat[element] === repeat[element]) {
+//       repeat[element] += 1;
+//       console.log(repeat[element]);
+//     } else {
+//       repeat[element] = 1;
+//     }
+//     if (repeat[element] <= N) {
+//       newList.push(element);
+//     }
+//   }
+//     console.log(newList)
+// }
+
+
+// console.log(a([1, 1, 1, 1, 1, 2, 2, 2, 2, 22, 3, 3, 34, 4, 4, 4, 5, 5], 2));
+
+// -------------МОДУЛЬ 4----------------
+// task 7
+// возвращает новый массив их общих элементов, то есть тех которые есть в обоих массивах.
+
+// function getCommonElements(firstArray, secondArray) {
+//   const commonElements = [];
+//   firstArray.forEach(element => {
+//           if (secondArray.includes(element)) {
+//                   commonElements.push(element);
+//           }
+//   });
+
+  
+
+//   return commonElements;
+  
+// }
+// console.log(getCommonElements([1, 2, 3], [2, 4]));
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
+
+
+// task - 17-18
+// const users =[
+//   {
+//     name: "Moore Hensley",
+//     email: "moorehensley@indexia.com",
+//     eyeColor: "blue",
+//     friends: ["Sharron Pace"],
+//     isActive: false,
+//     balance: 2811,
+//     skills: ["ipsum", "lorem"],
+//     gender: "male",
+//     age: 37,
+//   },
+//   {
+//     name: "Sharlene Bush",
+//     email: "sharlenebush@tubesys.com",
+//     eyeColor: "blue",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     isActive: true,
+//     balance: 3821,
+//     skills: ["tempor", "mollit", "commodo", "veniam", "laborum"],
+//     gender: "female",
+//     age: 34,
+//   },
+//   {
+//     name: "Ross Vazquez",
+//     email: "rossvazquez@xinware.com",
+//     eyeColor: "green",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     isActive: false,
+//     balance: 3793,
+//     skills: ["nulla", "anim", "proident", "ipsum", "elit"],
+//     gender: "male",
+//     age: 24,
+//   },
+//   {
+//     name: "Elma Head",
+//     email: "elmahead@omatom.com",
+//     eyeColor: "green",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     isActive: true,
+//     balance: 2278,
+//     skills: ["adipisicing", "irure", "velit"],
+//     gender: "female",
+//     age: 21,
+//   },
+//   {
+//     name: "Carey Barr",
+//     email: "careybarr@nurali.com",
+//     eyeColor: "blue",
+//     friends: ["Jordan Sampson", "Eddie Strong"],
+//     isActive: true,
+//     balance: 3951,
+//     skills: ["ex", "culpa", "nostrud"],
+//     gender: "male",
+//     age: 27,
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     email: "blackburndotson@furnigeer.com",
+//     eyeColor: "brown",
+//     friends: ["Jacklyn Lucas", "Linda Chapman"],
+//     isActive: false,
+//     balance: 1498,
+//     skills: ["non", "amet", "ipsum"],
+//     gender: "male",
+//     age: 38,
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     email: "shereeanthony@kog.com",
+//     eyeColor: "brown",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     isActive: true,
+//     balance: 2764,
+//     skills: ["lorem", "veniam", "culpa"],
+//     gender: "female",
+//     age: 39,
+//   },
+// ];
+
+// const getUserNames = users => {
+        
+//         const genders = users.map(user => user.gender);
+    
+//         return genders;
+//   };
+
+
+// console.log(getUserNames(users));
+
+
+// task - 20
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["adventure", "history"],
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     genres: ["fiction", "mysticism"],
+//   },
+//   {
+//     title: "Redder Than Blood",
+//     author: "Tanith Lee",
+//     genres: ["horror", "mysticism", "adventure"],
+//   },
+// ];
+// const allGenres = books.flatMap(book => book.genres);
+// const uniqueGenres = allGenres.filter(
+// 	(genre, index, array) =>array.indexOf(genre) === index
+// );
+
+// console.log(allGenres);
+// console.log(uniqueGenres);
+
+
+// task - 21
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+
+// const MIN_RATING = 8;
+// const AUTHOR = "Bernard Cornwell";
+// // Change code below this line
+
+// const topRatedBooks = books.filter(book=>book.rating >= MIN_RATING);
+// const booksByAuthor = books.filter(book => book.author === AUTHOR);
+ 
+// console.log(topRatedBooks);
+// console.log(booksByAuthor);
+
+
+// task - 30
+// const firstArray = [26, 94, 36, 18];
+
+// const eachElementInFirstIsEven = firstArray.every(value => value %2=== 0)
+// console.log(eachElementInFirstIsEven);
+
+
+// task - 35
+
+// const players = [
+//   { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//   { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//   { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//   { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
+
+
+
+// const totalScore = players.reduce((total, player) => {
+//   return total + player.playtime/player.gamesPlayed;
+// }, 0);
+
+// console.log(totalScore);
+
+//    Задача 45
+  
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   {
+//     title: "The Dreams in the Witch House",
+//     author: "Howard Lovecraft",
+//     rating: 8.67,
+//   },
+// ];
+// const MIN_BOOK_RATING = 8;
+// // Change code below this line
+
+// const names = [...books]
+//     // .filter(value => value.rating >= MIN_BOOK_RATING)
+//     .map(book => book.author);
+// 	// .sort((a,b) => a.localeCompare(b));
+// console.log(names);
+
+// ---------------МОДУЛЬ - 5
+
+
+// task - 10
+// class Storage {
+//     constructor(items) {
+//         this.items = items;
+//     }
+  
+//     getItems() {
+//         return this.items;
+//     }
+//     addItem(newItem) {
+//         this.items.push(newItem);
+//     }
+//     removeItem(itemToRemove) {
+//         for (let i = 0; i < this.items.length; i += 1) {
+//             const item = this.items[i];
+//             if (itemToRemove === item) {
+//                 return this.items.splice(i, 1)
+//             }
+//         }
+//     }
+// }
+// // Change code above this line
+// const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+// storage.addItem("Droid");
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+// storage.removeItem("Prolonger");
+// console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+
+// ------------- Изменение фото при клике ---------------
+
+
+const magicBtn = document.querySelector(".js-magic-btn");
+
+magicBtn.addEventListener("click", () => {
+    const imageEl = document.querySelector(".img");
+
+    imageEl.src = "./images/photo/02_2.jpg";
+    imageEl.alt = "доыольный";
+});
